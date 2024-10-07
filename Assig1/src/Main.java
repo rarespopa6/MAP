@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         // Aufgabe 1
+        System.out.println("Aufgabe 1");
         Aufgabe1 aufgabe1 = new Aufgabe1();
 
         int[] grades = {29, 37, 38, 41, 84, 67};
@@ -19,6 +20,8 @@ public class Main {
         System.out.println("Max Rounded Grade: " + maxRoundedGrade);
 
         // Aufgabe 2
+        System.out.println();
+        System.out.println("Aufgabe 2");
         try {
             int[] array = {4, 8, 3, 10, 17};
             Aufgabe2 aufgabe2 = new Aufgabe2(array.length, array);
@@ -32,5 +35,23 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        // Aufgabe 3
+        System.out.println();
+        System.out.println("Aufgabe 3");
+        int[] num1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] num2 = {8, 7, 0, 0, 0, 0, 0, 0, 0};
+
+        Aufgabe3 aufgabe3 = new Aufgabe3(num1, num2);
+        System.out.println("Summe: " + Arrays.toString(aufgabe3.getSum()));
+
+        int[] num3 = {8, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] num4 = {5, 4, 0, 0, 0, 0, 0, 0, 0};
+
+        Aufgabe3 aufgabe3Diff = new Aufgabe3(num3, num4);
+
+        System.out.println("Differenz: " + Arrays.toString(aufgabe3Diff.getDifference()));
+        System.out.println("Multiplikation: " + Arrays.toString(aufgabe3.multiplyByDigit(2)));
+        System.out.println("Division: " + Arrays.toString(aufgabe3.divideByDigit(2)));
     }
 }
