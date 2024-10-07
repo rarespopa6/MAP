@@ -53,5 +53,22 @@ public class Main {
         System.out.println("Differenz: " + Arrays.toString(aufgabe3Diff.getDifference()));
         System.out.println("Multiplikation: " + Arrays.toString(aufgabe3.multiplyByDigit(2)));
         System.out.println("Division: " + Arrays.toString(aufgabe3.divideByDigit(2)));
+
+        // Aufgabe 4
+        System.out.println();
+        System.out.println("Aufgabe 4");
+
+        int[] usbPrices = {8, 12, 15};
+        int[] keyboardPrices = {40, 50, 60};
+
+        Aufgabe4 aufgabe = new Aufgabe4(usbPrices, keyboardPrices);
+
+        System.out.println("Min Preis Tastaturen: " + aufgabe.getMinKeyboardPrice());
+        System.out.println("Grosstes Preis aus beiden: " + aufgabe.getHighestPrice());
+
+        int budget = 60;
+        System.out.println("Teuresten USB, das er sich leisten kann " + budget + ": " + aufgabe.getMostExpensiveAffordableUsb(budget));
+
+        System.out.println("Hochstens so viel kann er ausgeben" + ": " + aufgabe.getMaxSpent(budget));
     }
 }
