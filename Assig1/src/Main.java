@@ -12,6 +12,8 @@ public class Main {
 
         double averageGrade = aufgabe1.getAverageGrade(grades);
         System.out.println("Average Grade: " + averageGrade);
+        int[] nicht = aufgabe1.getLowGrades(aufgabe1.getRoundedGrades(grades));
+        System.out.println("Nicht ausreichende:" + Arrays.toString(nicht));
 
         int[] roundedGrades = aufgabe1.getRoundedGrades(grades);
         System.out.println("Rounded Grades: " + Arrays.toString(roundedGrades));
@@ -48,7 +50,7 @@ public class Main {
         int[] num3 = {8, 3, 0, 0, 0, 0, 0, 0, 0};
         int[] num4 = {5, 4, 0, 0, 0, 0, 0, 0, 0};
 
-        Aufgabe3 aufgabe3Diff = new Aufgabe3(num3, num4);
+        Aufgabe3 aufgabe3Diff = new Aufgabe3(num4, num3);
 
         System.out.println("Differenz: " + Arrays.toString(aufgabe3Diff.getDifference()));
         System.out.println("Multiplikation: " + Arrays.toString(aufgabe3.multiplyByDigit(2)));
@@ -70,5 +72,14 @@ public class Main {
         System.out.println("Teuresten USB, das er sich leisten kann " + budget + ": " + aufgabe.getMostExpensiveAffordableUsb(budget));
 
         System.out.println("Hochstens so viel kann er ausgeben" + ": " + aufgabe.getMaxSpent(budget));
+
+        int usb2[] = {8, 12};
+        int keyboard2[] = {60};
+        Aufgabe4 aufgabe4 = new Aufgabe4(usb2, keyboard2);
+        System.out.println(aufgabe4.getMaxSpent(60));
+
+        int keyboard3[] = {40, 60};
+        Aufgabe4 aufgabe41 = new Aufgabe4(usb2, keyboard3);
+        System.out.println(aufgabe41.getMaxSpent(60));
     }
 }
